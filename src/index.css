@@ -1,0 +1,259 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  padding-top: 80px; /* adjust according to navbar height */
+}
+:root {
+  --bs-body-font-family: 'Poppins', sans-serif;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  box-shadow: none !important; /* Agar box-shadow bhi ho to use bhi remove kare */
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* global colors  */
+
+.text-light-4{
+  color: #9E99FE !important;
+}
+
+
+/* ///navbar css */
+.nav-link {
+  text-decoration: none !important; /* Remove underline */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.nav-link:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  color: #007bff; /* Optional: Change color on hover */
+}
+
+@media (max-width: 992px) {
+  .nav-item {
+    text-align: center; /* Center items for small screens */
+    margin: 10px 0; /* Add spacing for better touchability */
+  }
+
+  .nav-link {
+    font-size: 1.2rem; /* Optional: Increase font size for better readability */
+  }
+}
+
+/* 
+.custom-navbar {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+.custom-navbar {
+  border-bottom: 2px solid #ddd;
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  padding-bottom: 5px;
+}
+
+.nav-hover:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+} */
+
+
+
+
+
+/* ///home page css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9fafb;
+}
+.section-title {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+.card-title {
+  font-weight: 600;
+}
+.explore-btn {
+  display: block;
+  margin: 1rem auto 2rem auto;
+  max-width: 200px;
+  transition: all 0.3s ease;
+}
+.explore-btn:hover {
+  background-color: #0b5ed7;
+  color: #fff;
+}
+.explore-btn::after {
+  content: " \2192";
+  font-weight: bold;
+  margin-left: 5px;
+  transition: margin-left 0.3s ease;
+}
+.explore-btn:hover::after {
+  margin-left: 10px;
+}
+.service-icon {
+  font-size: 3rem;
+  color: #0d6efd;
+  margin-bottom: 1rem;
+}
+/* Card hover animation */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.3);
+  z-index: 10;
+}
+/* Animated top border on service cards on hover */
+.card.text-center {
+  position: relative;
+  overflow: hidden;
+}
+.card.text-center::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background-color: #0d6efd;
+  transform-origin: center;
+  transition: width 0.4s ease;
+  border-radius: 2px;
+}
+.card.text-center:hover::before {
+  width: 100%;
+  left: 0;
+}
+/* Fade-in animation for sections */
+
+/* Slider images equal height and object-fit */
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+/* Card button styling */
+.card-view-btn {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 0.5rem 0;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+.card-view-btn:hover {
+  background-color: #0b5ed7;
+  color: #fff;
+}
+/* Smaller card image */
+.small-card-img {
+  height: 150px;
+  object-fit: cover;
+}
+/* Smaller card body padding */
+.small-card-body {
+  padding: 0.75rem 1rem;
+}
+/* Minimalistic button style */
+.minimal-btn {
+  width: auto;
+  padding: 0.25rem 0.75rem;
+  background-color: transparent !important;
+  border: 1px solid #0d6efd !important;
+  color: #0d6efd !important;
+  font-weight: 500;
+  border-radius: 0.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.minimal-btn:hover {
+  background-color: #0d6efd !important;
+  color: #fff !important;
+}
+/* Card details styling */
+.card-details {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+
+
+/* explore page css */
+
+.search-input{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #9E99FE !important;
+  margin-bottom: 1rem;
+
+}
+
+.shadow-md{
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Hide scrollbar for all browsers */
+.hide-scrollbar {
+  overflow-x: auto;; /* Allow horizontal scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+
+  /* For Chrome, Safari, and Edge */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+
+.bg-purple{
+  background-color: #9E99FE !important;
+
+}    
+.bg-pink{
+  background-color: pink !important;
+}    
+.bg-orange{
+
+  background-color: orange !important;
+}  
+
+.bg-indigo{
+  background-color: indigo !important;
+}
+.bg-cyan{
+  background-color: cyan !important;
+}  
