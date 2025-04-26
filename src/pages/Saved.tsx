@@ -11,8 +11,8 @@ import GridPostList from "../components/GridPostList";
 const Saved = () => {
 
     
-    const [currentUser, setCurrentUser] = useState(null);
-    const [savePosts, setSavePosts] = useState([]);
+  const [currentUser, setCurrentUser] = useState<Models.Document | null>(null);
+  const [savePosts, setSavePosts] = useState<Models.Document[]>([]);
    
   
     useEffect(() => {
