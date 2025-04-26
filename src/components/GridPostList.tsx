@@ -3,8 +3,19 @@ import { Link } from 'react-router-dom';
 import CardStats from './CardStats';
 import { useUserContext } from '../context/AuthContext';
 
+type Products = {
+  $id: string;
+  name: string;
+  skinType: string[];
+  productUrl: string;
+  price: string;
+  imageUrl: string;
+  tags?: string[];
+};
+ 
+
 type GridPostListProps = {
-  post: Models.Document[],
+  post: (Products | Models.Document)[],
   showUser?: boolean,
   showStats?: boolean
 }
@@ -76,7 +87,8 @@ function GridPostList({ post, showStats = true }: GridPostListProps) {
   
                 {/* Push below to bottom */}
                 <div className="mt-auto d-flex justify-content-between align-items-center">
-                  {showStats && <CardStats userId={user.id} post={postItem} />}
+                {showStats && 'likes' in postItem && <CardStats userId={user.id} post={postItem} />}
+
                   <Link
                     to={postItem.productUrl}
                     target="_blank"

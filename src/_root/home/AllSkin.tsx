@@ -1,5 +1,5 @@
 import { Loader } from 'lucide-react';
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { getAllProduct } from '../../lib/appwrite/api';
 import GridPostList from '../../components/GridPostList';
 import { Models } from 'appwrite';

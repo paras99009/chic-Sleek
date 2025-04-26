@@ -1,4 +1,3 @@
-import React from 'react'
 import PostForm from '../components/PostForm'
 import { FileImage } from 'lucide-react'
 
